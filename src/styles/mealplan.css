@@ -1,0 +1,147 @@
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+.filter-chip {
+  padding: 10px 20px;
+  border: 2px solid var(--border);
+  background: white;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.filter-chip:hover,
+.filter-chip.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.plan-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: all 0.3s;
+  border-top: 5px solid var(--primary);
+}
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.plan-loss {
+  border-top-color: #ff6b6b;
+}
+.plan-gain {
+  border-top-color: #845ef7;
+}
+.plan-keep {
+  border-top-color: var(--primary);
+}
+.plan-veg {
+  border-top-color: #51cf66;
+}
+.plan-keto {
+  border-top-color: #ffa94d;
+}
+.plan-med {
+  border-top-color: #4dabf7;
+}
+
+.plan-image {
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 8px 0 16px;
+}
+.plan-tag {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.plan-meta {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.plan-meta > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plan-meta strong {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+.plan-meta span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.weekly-preview h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+}
+.day-card {
+  background: var(--surface);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+.day-card h4 {
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+.day-meal {
+  font-size: 0.85rem;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+.day-total {
+  margin-top: 10px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+  .week-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+}
